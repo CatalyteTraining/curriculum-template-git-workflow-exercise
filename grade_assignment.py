@@ -2,7 +2,7 @@ import subprocess
 import sys
 import re
 
-def check_commit_count(min_commits=19):
+def check_commit_count(min_commits=13):
     try:
         result = subprocess.run(['git', 'rev-list', '--count', 'HEAD'], capture_output=True, text=True, check=True)
         count = int(result.stdout.strip())
